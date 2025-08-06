@@ -16,7 +16,7 @@ enum ScrollingNodeType {
     var isPhysicalNode: Bool { return self == .foreground }
 }
 
-protocol ScrollingNodeDelegate: class {
+protocol ScrollingNodeDelegate: AnyObject {
     func configure(pageNode node: PageNode, for index: Int, nodeType: ScrollingNodeType)
 }
 
